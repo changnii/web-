@@ -1,10 +1,16 @@
 # Bật RewriteEngine để xử lý các luật dưới đây
 RewriteEngine On
 
-# Chuyển hướng yêu cầu tới file index.php nếu không tìm thấy file hoặc thư mục tương ứng
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [QSA,L]
+# Nếu yêu cầu là tệp tĩnh và tệp tin tồn tại, phục vụ nó trực tiếp
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Nếu yêu cầu là thư mục tĩnh và thư mục tồn tại, phục vụ nó trực tiếp
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Nếu yêu cầu không phải là tệp tin hoặc thư mục, chuyển hướng đến index.php
+RewriteRule ^ index.php [QSA,L]
 
 # Tắt liệt kê thư mục
 Options -Indexes
