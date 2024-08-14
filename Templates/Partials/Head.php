@@ -6,7 +6,7 @@
 <div class="bg-main">
     <div class="container">
         <nav class="navbar navbar-light">
-            <div class="col-2"><a href="index.php?task=pagehome"><img width="100px"  src="Image/logo.png"></a></div>
+            <div class="col-2"><a href="index.php?task=pagehome"><img width="100px"  src="public/Image/logo.png"></a></div>
             <div class="col-5">
                 <form class="form-inline my-2 my-lg-0" method="POST">
                     <input style="min-width: 250px;" class="form-control mr-sm-0" type="search" name="text_search" placeholder="Tìm kiếm sản phẩm" aria-label="Search">

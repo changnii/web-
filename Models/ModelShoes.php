@@ -14,7 +14,7 @@ class ModelShoes
         // $this->db = mysqli_connect("localhost", "root", "", "moonshoes");
         // mysqli_set_charset($this->db, "utf8");
 
-        $conn_string = $_ENV['DB_URL'];
+        $conn_string = "postgres://default:C3oeldB6nYxK@ep-morning-mountain-a1qinx3a.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require&options=endpoint%3Dep-morning-mountain-a1qinx3a";
 
         $this->db = pg_connect($conn_string);
 
@@ -180,7 +180,7 @@ class ModelShoes
                   AND product.id_trandmark = trandmark.id_trandmark
                   AND type.id_type = product.id_type";
         $result = pg_query($this->db, $query);
-        return $result->fetch_assoc();
+        return $result->pg_fetch_assoc();
     }
     // Sửa sản phẩm
     public function editProduct(){

@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<link href="bootstrap/bootstrap.css" rel="stylesheet">
-<script src="bootstrap/bootstrap.bundle.js"></script>
-<script src="bootstrap/bootstrap.js"></script>
-<link rel="stylesheet" href="Css/css.css">
-<link rel="stylesheet" href="fontawesome/css/all.css">
-<link rel="stylesheet" href="slick/slick-1.8.1/slick/slick.css">
-<link rel="stylesheet" href="slick/slick-1.8.1/slick/slick-theme.css">
+<?php include_once __DIR__ . "/../Templates/link.php";?>
 <head>
-    <?php include_once "Templates/Partials/Head.php";?>
+    <?php include_once __DIR__ . "/../Templates/Partials/Head.php";?>
+    <?php include_once __DIR__ . "/../Templates/Partials/Header.php";?>
 </head>
 <body>
-<nav>
-    <?php include_once "Templates/Partials/Header.php";?>
-</nav>
 <div class="bg-light mb-5">
     <div class="container" style="height: 100%; min-height: 400px;">
         <h3 class="rounded" style="border-bottom: solid 3px #F18620; color: #E8E8E8;"><div class="mt-2 p-1 bg-main rounded" style="width: 120px;">LIÊN HỆ</div></h3>

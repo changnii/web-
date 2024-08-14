@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<link href="bootstrap/bootstrap.css" rel="stylesheet">
-<script src="bootstrap/bootstrap.bundle.js"></script>
-<script src="bootstrap/bootstrap.js"></script>
-<link rel="stylesheet" href="Css/css.css">
-<link rel="stylesheet" href="fontawesome/css/all.css">
-<link rel="stylesheet" href="slick/slick-1.8.1/slick/slick.css">
-<link rel="stylesheet" href="slick/slick-1.8.1/slick/slick-theme.css">
+    <?php include_once __DIR__ . "/../Templates/link.php";?>
 <head>
-    <?php include_once "Templates/Partials/Head.php";?>
+    <?php include_once __DIR__ . "/../Templates/Partials/Head.php";?>
+    <?php include_once __DIR__ . "/../Templates/Partials/Header.php";?>
 </head>
 <body>
-<nav>
-    <?php include_once "Templates/Partials/Header.php";?>
-</nav>
 <div class="bg-light">
     <div class="container">
         <div style="border-bottom: 2px solid black;" class="mb-4">
@@ -22,8 +13,8 @@
         </div>
         <div class="row mx-auto">
             <?php
-            if (mysqli_fetch_assoc($result)>0){
-            while ($row = mysqli_fetch_assoc($result)){ ?>
+            if (pg_fetch_assoc($result)>0){
+            while ($row = pg_fetch_assoc($result)){ ?>
                 <div class="product">
                     <div class="product-details">
                         <div class="image-shoe">
@@ -45,7 +36,7 @@
     </div>
 </div>
 <footer>
-    <?php include_once "Templates/Partials/Footer.php";?>
+    <?php include_once __DIR__ . "/../Templates/Partials/Footer.php";?>
 </footer>
 </body>
 

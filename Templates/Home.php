@@ -11,22 +11,22 @@
             <div class="row">
                 <div class="col-lg-3 px-2 ml-2">
                     <div class="list-group">
-                        <div class="list-group-item"><a href="index.php?task=pageadidas"><img src="Image/adidas.png" width="15px" alt=""> Giày Adidas</a></div>
-                        <div class="list-group-item"><a href="index.php?task=pagebalance"><img src="Image/balance.png" width="15px" alt=""> Giày Balance</a></div>
-                        <div class="list-group-item"><a href="index.php?task=pagepuma"><img src="Image/puma.png" width="15px" alt=""> Giày Puma</a></div>
-                        <div class="list-group-item"><a href="index.php?task=pageconverse"><img src="Image/converse.png" width="15px" alt=""> Giày Converse</a></div>
-                        <div class="list-group-item"><a href="index.php?task=pagebalenciaga"><img src="Image/balenciaga.png" width="15px" alt=""> Giày Balenciaga</a></div>
-                        <div class="list-group-item"><a href="index.php?task=pagevans"><img src="Image/vans.png" width="15px" alt=""> Giày Vans</a></div>
+                        <div class="list-group-item"><a href="index.php?task=pageadidas"><img src="public/Image/adidas.png" width="15px" alt=""> Giày Adidas</a></div>
+                        <div class="list-group-item"><a href="index.php?task=pagebalance"><img src="public/Image/balance.png" width="15px" alt=""> Giày Balance</a></div>
+                        <div class="list-group-item"><a href="index.php?task=pagepuma"><img src="public/Image/puma.png" width="15px" alt=""> Giày Puma</a></div>
+                        <div class="list-group-item"><a href="index.php?task=pageconverse"><img src="public/Image/converse.png" width="15px" alt=""> Giày Converse</a></div>
+                        <div class="list-group-item"><a href="index.php?task=pagebalenciaga"><img src="public/Image/balenciaga.png" width="15px" alt=""> Giày Balenciaga</a></div>
+                        <div class="list-group-item"><a href="index.php?task=pagevans"><img src="public/Image/vans.png" width="15px" alt=""> Giày Vans</a></div>
                     </div>
                 </div>
                 <div id="banner" class="col-lg-8 ml-3">
-                    <div><img src="Image/banner1.jpg" height="350px" alt=""></div>
-                    <div><img src="Image/banner2.jpg" width="700px" height="350px"alt=""></div>
-                    <div><img src="Image/banner3.jpg" height="350px" alt=""></div>
-                    <div><img src="Image/banner4.jpg" width="700px" height="350px" alt=""></div>
-                    <div><img src="Image/banner5.jpg" width="730px" height="350px" alt=""></div>
-                    <div><img src="Image/banner6.jpg" width="700px" height="350px" alt=""></div>
-                    <div><img src="Image/banner7.jpg" width="700px" height="350px" alt=""></div>
+                    <div><img src="public/Image/banner1.jpg" height="350px" alt=""></div>
+                    <div><img src="public/Image/banner2.jpg" width="700px" height="350px"alt=""></div>
+                    <div><img src="public/Image/banner3.jpg" height="350px" alt=""></div>
+                    <div><img src="public/Image/banner4.jpg" width="700px" height="350px" alt=""></div>
+                    <div><img src="public/Image/banner5.jpg" width="730px" height="350px" alt=""></div>
+                    <div><img src="public/Image/banner6.jpg" width="700px" height="350px" alt=""></div>
+                    <div><img src="public/Image/banner7.jpg" width="700px" height="350px" alt=""></div>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                         <div class="product">
                             <div class="product-details">
                                 <div class="image-shoe">
-                                    <img class="image" src="<?php echo $row['image'];?>" alt="">
+                                    <img class="image" src="public/<?php echo $row['image'];?>" alt="">
                                     <div class="middle">
                                         <a style="color: #E8E8E8;" class="text" href="index.php?task=detail&id=<?php echo $row['id_product']; ?>">Xem hàng</a>
                                     </div>
@@ -98,8 +98,8 @@
 <footer>
     <?php include_once __DIR__ . "/../Templates/Partials/Footer.php";?>
 </footer>
-    <script src="Js/jquery-3.3.1.min.js"></script>
-    <script src="slick/slick-1.8.1/slick/slick.js"></script>
+    <script src="public/Js/jquery-3.3.1.min.js"></script>
+    <script src="public/slick/slick-1.8.1/slick/slick.js"></script>
     <script>
         $(document).ready(function(){
             $('#banner').slick({

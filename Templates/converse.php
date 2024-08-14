@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link href="bootstrap/bootstrap.css" rel="stylesheet">
-<script src="bootstrap/bootstrap.bundle.js"></script>
-<script src="bootstrap/bootstrap.js"></script>
-<link rel="stylesheet" href="Css/css.css">
-<link rel="stylesheet" href="fontawesome/css/all.css">
-<link rel="stylesheet" href="slick/slick-1.8.1/slick/slick.css">
-<link rel="stylesheet" href="slick/slick-1.8.1/slick/slick-theme.css">
+<link href="public/bootstrap/bootstrap.css" rel="stylesheet">
+<script src="public/bootstrap/bootstrap.bundle.js"></script>
+<script src="public/bootstrap/bootstrap.js"></script>
+<link rel="stylesheet" href="public/Css/css.css">
+<link rel="stylesheet" href="public/fontawesome/css/all.css">
+<link rel="stylesheet" href="public/slick/slick-1.8.1/slick/slick.css">
+<link rel="stylesheet" href="public/slick/slick-1.8.1/slick/slick-theme.css">
 <head>
     <?php include_once "Templates/Partials/Head.php";?>
 </head>
