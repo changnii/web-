@@ -4,19 +4,11 @@
   "functions": {
     "api/index.php": { "runtime": "vercel-php@0.7.1" }
   },
+  
   "routes": [
     {
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
-  ],
-
-  "env": {
-    "PG_HOST": "ep-shrill-disk-******.eu-central-1.aws.neon.tech",
-    "PG_PORT": "5432",
-    "PG_DB": "php-neon",
-    "PG_USER": "daniil.bazhenov",
-    "PG_PASSWORD": "**********",
-    "PG_ENDPOINT": "ep-shrill-disk-******"
-  }
+  ]
 }
