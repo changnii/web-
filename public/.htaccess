@@ -1,35 +1,14 @@
 # Bật RewriteEngine để xử lý các luật dưới đây
 RewriteEngine On
 
-# Nếu yêu cầu là tệp tĩnh và tệp tin tồn tại, phục vụ nó trực tiếp
-RewriteCond %{REQUEST_FILENAME} -f
-RewriteRule ^ - [L]
-
-# Nếu yêu cầu là thư mục tĩnh và thư mục tồn tại, phục vụ nó trực tiếp
+RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
 # Nếu yêu cầu không phải là tệp tin hoặc thư mục, chuyển hướng đến index.php
 RewriteRule ^ index.php [QSA,L]
 
-# Tắt liệt kê thư mục
-Options -Indexes
-
-# Thiết lập mặc định cho DirectoryIndex
-DirectoryIndex index.php
-
-# Bảo vệ file nhạy cảm
-<FilesMatch "\.(htaccess|htpasswd|ini|phar|sh|sql)$">
-    Require all denied
-</FilesMatch>
-
-# Bảo mật các tập tin PHP không được truy cập trực tiếp
-<FilesMatch "\.php$">
-    Order Allow,Deny
-    Deny from all
-</FilesMatch>
-
-# Kích hoạt cache cho các tài nguyên tĩnh
+# Thiết lập Cache-Control và Expires Headers cho các tệp tĩnh trong 'public'
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType image/jpg "access plus 1 year"
@@ -44,14 +23,9 @@ DirectoryIndex index.php
 </IfModule>
 
 <IfModule mod_headers.c>
-    # Áp dụng Cache-Control cho các tài nguyên tĩnh
+    # Áp dụng Cache-Control cho các tài nguyên tĩnh trong 'public'
     <FilesMatch "\.(ico|jpg|jpeg|png|gif|js|css|svg)$">
         Header set Cache-Control "max-age=31536000, public"
     </FilesMatch>
 </IfModule>
 
-# Ngăn chặn truy cập đến các thư mục nhạy cảm
-<DirectoryMatch "^.*(\\.|/)\.(ht|git|svn|cvs|bzr|hg|p4|sfv|conf|fugue|gitignore|md|yml|yml|svn|docker|db|sql)$">
-    Order Allow,Deny
-    Deny from all
-</DirectoryMatch>
