@@ -14,7 +14,8 @@ class ModelShoes
         // $this->db = mysqli_connect("localhost", "root", "", "moonshoes");
         // mysqli_set_charset($this->db, "utf8");
 
-        $conn_string = "postgres://default:C3oeldB6nYxK@ep-morning-mountain-a1qinx3a.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require&options=endpoint%3Dep-morning-mountain-a1qinx3a";
+        // $conn_string = "postgres://default:C3oeldB6nYxK@ep-morning-mountain-a1qinx3a.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require&options=endpoint%3Dep-morning-mountain-a1qinx3a";
+        $conn_string = $_ENV['DB_URL'];
 
         $this->db = pg_connect($conn_string);
 
